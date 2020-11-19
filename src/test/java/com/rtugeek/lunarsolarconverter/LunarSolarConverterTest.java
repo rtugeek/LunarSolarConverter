@@ -48,4 +48,11 @@ public class LunarSolarConverterTest extends TestCase {
 
         Assert.assertEquals("2050年六月初五日", lunar3.toString());
     }
+
+    public void testToString() {
+        Lunar lunar1 = new Lunar(2020, 8, 17, false);
+        Lunar lunar2 = new Lunar(2020, 1, 17, false);
+        System.out.println(lunar1);
+        System.out.println(lunar2);
+    }
 }

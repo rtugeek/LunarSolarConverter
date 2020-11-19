@@ -5,7 +5,7 @@ package com.rtugeek.lunarsolarconverter;
  * @date 2020/04/29
  */
 public class LunarStringUtils {
-    public final static String CHINESE_MONTH[] = {"一", "二", "三", "四", "五", "六", "七", "八", "九",
+    public final static String CHINESE_MONTH[] = {"正", "二", "三", "四", "五", "六", "七", "八", "九",
             "十", "冬", "腊"};
     public final static String CHINESE_NUMBER[] = {"〇", "一", "二", "三", "四", "五", "六", "七",
             "八", "九"};
