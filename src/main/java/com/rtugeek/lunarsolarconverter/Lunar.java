@@ -62,8 +62,7 @@ public class Lunar {
             stringBuilder.append("闰");
         }
         stringBuilder.append(LunarStringUtils.CHINESE_MONTH[monthOfYear - 1]).append("月")
-                .append(LunarStringUtils.getChinaDayString(dayOfMonth))
-        .append("日");
+                .append(LunarStringUtils.getChinaDayString(dayOfMonth));
         return stringBuilder.toString();
     }
 }

@@ -36,17 +36,17 @@ public class LunarSolarConverterTest extends TestCase {
         Solar solar = new Solar(2020, 10, 1);
         Lunar lunar = LunarSolarConverter.SolarToLunar(solar);
 
-        Assert.assertEquals("2020年八月十五日", lunar.toString());
+        Assert.assertEquals("2020年八月十五", lunar.toString());
 
         Solar solar2 = new Solar(2020, 6, 16);
         Lunar lunar2 = LunarSolarConverter.SolarToLunar(solar2);
 
-        Assert.assertEquals("2020年闰四月廿五日", lunar2.toString());
+        Assert.assertEquals("2020年闰四月廿五", lunar2.toString());
 
         Solar solar3 = new Solar(2050, 7, 23);
         Lunar lunar3 = LunarSolarConverter.SolarToLunar(solar3);
 
-        Assert.assertEquals("2050年六月初五日", lunar3.toString());
+        Assert.assertEquals("2050年六月初五", lunar3.toString());
     }
 
     public void testToString() {
@@ -54,5 +54,10 @@ public class LunarSolarConverterTest extends TestCase {
         Lunar lunar2 = new Lunar(2020, 1, 17, false);
         System.out.println(lunar1);
         System.out.println(lunar2);
+    }
+
+    public void testGetCurrentLunarYear() {
+        int currentLunarYear = LunarSolarConverter.getCurrentLunarYear();
+        System.out.println(currentLunarYear);
     }
 }

@@ -1,6 +1,9 @@
 package com.rtugeek.lunarsolarconverter;
 
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class LunarSolarConverter {
     /*
      * |----4位闰月|-------------13位1为30天，0为29天|
@@ -128,5 +131,17 @@ public class LunarSolarConverter {
 
         lunar.dayOfMonth = lunarD;
         return lunar;
+    }
+
+    /**
+     * 获取当前农历年份，农历常比公历慢一个月。在公历1月份,会出现农历比公历少了一年的情况
+     *
+     * @return
+     */
+    public static int getCurrentLunarYear() {
+        Calendar calendar = Calendar.getInstance();
+        Solar solar = new Solar(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));
+        Lunar lunar = SolarToLunar(solar);
+        return lunar.year;
     }
 }
